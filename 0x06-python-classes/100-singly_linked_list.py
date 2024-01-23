@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """singly-linked defination"""
 
-
 class Node:
     """Node class body."""
 
@@ -35,7 +34,6 @@ class Node:
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
-
 
 class SinglyLinkedList:
     """Singly-linked defination"""
