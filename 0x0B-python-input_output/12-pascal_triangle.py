@@ -1,19 +1,35 @@
 #!/usr/bin/python3
-"""pascal_traigle module."""
+
+
+"""
+This module defines a function pascal_triangle(n)
+"""
 
 
 def pascal_triangle(n):
-    """ pascal traigle class body.
+    """Return a pascal triangle
+    args:
+        n(int): number of triangles
     """
     if n <= 0:
         return []
-
-    triangles = [[1]]
-    while len(triangles) != n:
-        tri = triangles[-1]
-        tmp = [1]
-        for i in range(len(tri) - 1):
-            tmp.append(tri[i] + tri[i + 1])
-        tmp.append(1)
-        triangles.append(tmp)
-    return
+    if n == 1:
+        return [[1]]
+    if n == 2:
+        return [[1], [1, 1]]
+    my_list = [[1], [1, 1]]
+    i = 2
+    while i < n:
+        sub_list = []
+        sub_list.append(1)
+        j = 0
+        sum = 0
+        while j + 1 < len(my_list[-1]):
+            sum += my_list[-1][j] + my_list[-1][j + 1]
+            sub_list.append(sum)
+            sum = 0
+            j += 1
+        sub_list.append(1)
+        my_list.append(sub_list)
+        i += 1
+    return my_list
