@@ -3,16 +3,16 @@
 """Defines unittests for models/square.py.
 
 Unittest classes:
-    TestSquare_instantiation - line 23
-    TestSquare_size - line 87
-    TestSquare_x - line 165
-    TestSquare_y - line 237
-    TestSquare_order_of_initialization - line 305
-    TestSquare_area - line 321
-    TestSquare_stdout - line 342
-    TestSquare_update_args - line 425
-    TestSquare_update_kwargs - line 537
-    TestSquare_to_dictionary - 639
+    TestSquare_instantiation - line 24
+    TestSquare_size - line 88
+    TestSquare_x - line 166
+    TestSquare_y - line 238
+    TestSquare_order_of_initialization - line 306
+    TestSquare_area - line 322
+    TestSquare_stdout - line 343
+    TestSquare_update_args - line 426
+    TestSquare_update_kwargs - line 538
+    TestSquare_to_dictionary - 640
 """
 import io
 import sys
@@ -655,7 +655,5 @@ class TestSquare_to_dictionary(unittest.TestCase):
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
 
-
 if __name__ == "__main__":
     unittest.main()
-
